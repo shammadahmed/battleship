@@ -1,0 +1,537 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, orientation=landscape">
+	<title>&#9875; Battleship</title>
+</head>
+<body>
+	<h1 class="light-logo">&#9875; Battleship</h1>
+	<button id="new">Play a new game</button>
+	<section id="game">
+		<h2></h2>
+		<span></span>
+		<h2></h2>
+		<section data-player="1" class="board board1 active">
+			<span></span>
+			<span class="column">A</span>
+			<span class="column">B</span>
+			<span class="column">C</span>
+			<span class="column">D</span>
+			<span class="column">E</span>
+			<span class="column">F</span>
+			<span class="column">G</span>
+			<span class="column">H</span>
+			<span class="column">I</span>
+			<span class="column">J</span>
+			<span class="row">0</span>
+			<span class="box" data-box="1"></span>
+			<span class="box" data-box="2"></span>
+			<span class="box" data-box="3"></span>
+			<span class="box" data-box="4"></span>
+			<span class="box" data-box="5"></span>
+			<span class="box" data-box="6"></span>
+			<span class="box" data-box="7"></span>
+			<span class="box" data-box="8"></span>
+			<span class="box" data-box="9"></span>
+			<span class="box" data-box="10"></span>
+			<span class="row">10</span>
+			<span class="box" data-box="11"></span>
+			<span class="box" data-box="12"></span>
+			<span class="box" data-box="13"></span>
+			<span class="box" data-box="14"></span>
+			<span class="box" data-box="15"></span>
+			<span class="box" data-box="16"></span>
+			<span class="box" data-box="17"></span>
+			<span class="box" data-box="18"></span>
+			<span class="box" data-box="19"></span>
+			<span class="box" data-box="20"></span>
+			<span class="row">20</span>
+			<span class="box" data-box="21"></span>
+			<span class="box" data-box="22"></span>
+			<span class="box" data-box="23"></span>
+			<span class="box" data-box="24"></span>
+			<span class="box" data-box="25"></span>
+			<span class="box" data-box="26"></span>
+			<span class="box" data-box="27"></span>
+			<span class="box" data-box="28"></span>
+			<span class="box" data-box="29"></span>
+			<span class="box" data-box="30"></span>
+			<span class="row">30</span>
+			<span class="box" data-box="31"></span>
+			<span class="box" data-box="32"></span>
+			<span class="box" data-box="33"></span>
+			<span class="box" data-box="34"></span>
+			<span class="box" data-box="35"></span>
+			<span class="box" data-box="36"></span>
+			<span class="box" data-box="37"></span>
+			<span class="box" data-box="38"></span>
+			<span class="box" data-box="39"></span>
+			<span class="box" data-box="40"></span>
+			<span class="row">40</span>
+			<span class="box" data-box="41"></span>
+			<span class="box" data-box="42"></span>
+			<span class="box" data-box="43"></span>
+			<span class="box" data-box="44"></span>
+			<span class="box" data-box="45"></span>
+			<span class="box" data-box="46"></span>
+			<span class="box" data-box="47"></span>
+			<span class="box" data-box="48"></span>
+			<span class="box" data-box="49"></span>
+			<span class="box" data-box="50"></span>
+			<span class="row">50</span>
+			<span class="box" data-box="51"></span>
+			<span class="box" data-box="52"></span>
+			<span class="box" data-box="53"></span>
+			<span class="box" data-box="54"></span>
+			<span class="box" data-box="55"></span>
+			<span class="box" data-box="56"></span>
+			<span class="box" data-box="57"></span>
+			<span class="box" data-box="58"></span>
+			<span class="box" data-box="59"></span>
+			<span class="box" data-box="60"></span>
+			<span class="row">60</span>
+			<span class="box" data-box="61"></span>
+			<span class="box" data-box="62"></span>
+			<span class="box" data-box="63"></span>
+			<span class="box" data-box="64"></span>
+			<span class="box" data-box="65"></span>
+			<span class="box" data-box="66"></span>
+			<span class="box" data-box="67"></span>
+			<span class="box" data-box="68"></span>
+			<span class="box" data-box="69"></span>
+			<span class="box" data-box="70"></span>
+			<span class="row">70</span>
+			<span class="box" data-box="71"></span>
+			<span class="box" data-box="72"></span>
+			<span class="box" data-box="73"></span>
+			<span class="box" data-box="74"></span>
+			<span class="box" data-box="75"></span>
+			<span class="box" data-box="76"></span>
+			<span class="box" data-box="77"></span>
+			<span class="box" data-box="78"></span>
+			<span class="box" data-box="79"></span>
+			<span class="box" data-box="80"></span>
+			<span class="row">80</span>
+			<span class="box" data-box="81"></span>
+			<span class="box" data-box="82"></span>
+			<span class="box" data-box="83"></span>
+			<span class="box" data-box="84"></span>
+			<span class="box" data-box="85"></span>
+			<span class="box" data-box="86"></span>
+			<span class="box" data-box="87"></span>
+			<span class="box" data-box="88"></span>
+			<span class="box" data-box="89"></span>
+			<span class="box" data-box="90"></span>
+			<span class="row">90</span>
+			<span class="box" data-box="91"></span>
+			<span class="box" data-box="92"></span>
+			<span class="box" data-box="93"></span>
+			<span class="box" data-box="94"></span>
+			<span class="box" data-box="95"></span>
+			<span class="box" data-box="96"></span>
+			<span class="box" data-box="97"></span>
+			<span class="box" data-box="98"></span>
+			<span class="box" data-box="99"></span>
+			<span class="box" data-box="100"></span>
+		</section>
+		<article>
+			<aside data-player="2">
+				<h5>Opponent's ships</h5>
+				<label>🛳 Battleship:</label>
+				<div class="ship" data-ship="battleship">
+					<span data-size="4"></span>
+					<span data-size="4"></span>
+					<span data-size="4"></span>
+					<span data-size="4"></span>
+				</div>
+				<label>🛥 Destroyers:</label>
+				<div class="ship" data-ship="destroyer">
+					<span data-size="3"></span>
+					<span data-size="3"></span>
+					<span data-size="3"></span>
+				</div>
+				<div class="ship" data-ship="destroyer">
+					<span data-size="3"></span>
+					<span data-size="3"></span>
+					<span data-size="3"></span>
+				</div>
+				<label>&#128674; Submarines:</label>
+				<div class="ship" data-ship="submarine">
+					<span data-size="2"></span>
+					<span data-size="2"></span>
+				</div>
+				<div class="ship" data-ship="submarine">
+					<span data-size="2"></span>
+					<span data-size="2"></span>
+				</div>
+				<div class="ship" data-ship="submarine">
+					<span data-size="2"></span>
+					<span data-size="2"></span>
+				</div>
+				<label>⛵ Canon Boats:</label>
+				<span data-size="1" data-ship="boat"></span>
+				<span data-size="1" data-ship="boat"></span>
+				<span data-size="1" data-ship="boat"></span>
+				<span data-size="1" data-ship="boat"></span>
+			</aside>
+			<aside data-player="1">
+				<h5>Your ships</h5>
+				<label>🛳 Battleship:</label>
+				<div class="ship" data-ship="battleship">
+					<span data-size="4"></span>
+					<span data-size="4"></span>
+					<span data-size="4"></span>
+					<span data-size="4"></span>
+				</div>
+				<label>🛥 Destroyers:</label>
+				<div class="ship" data-ship="destroyer">
+					<span data-size="3"></span>
+					<span data-size="3"></span>
+					<span data-size="3"></span>
+				</div>
+				<div class="ship" data-ship="destroyer">
+					<span data-size="3"></span>
+					<span data-size="3"></span>
+					<span data-size="3"></span>
+				</div>
+				<label>&#128674; Submarines:</label>
+				<div class="ship" data-ship="submarine">
+					<span data-size="2"></span>
+					<span data-size="2"></span>
+				</div>
+				<div class="ship" data-ship="submarine">
+					<span data-size="2"></span>
+					<span data-size="2"></span>
+				</div>
+				<div class="ship" data-ship="submarine">
+					<span data-size="2"></span>
+					<span data-size="2"></span>
+				</div>
+				<label>⛵ Canon Boats:</label>
+				<span data-size="1" data-ship="boat"></span>
+				<span data-size="1" data-ship="boat"></span>
+				<span data-size="1" data-ship="boat"></span>
+				<span data-size="1" data-ship="boat"></span>
+			</aside>
+		</article>
+		<section data-player="2" class="board">
+			<span></span>
+			<span class="column">A</span>
+			<span class="column">B</span>
+			<span class="column">C</span>
+			<span class="column">D</span>
+			<span class="column">E</span>
+			<span class="column">F</span>
+			<span class="column">G</span>
+			<span class="column">H</span>
+			<span class="column">I</span>
+			<span class="column">J</span>
+			<span class="row">0</span>
+			<span class="box" data-box="1"></span>
+			<span class="box" data-box="2"></span>
+			<span class="box" data-box="3"></span>
+			<span class="box" data-box="4"></span>
+			<span class="box" data-box="5"></span>
+			<span class="box" data-box="6"></span>
+			<span class="box" data-box="7"></span>
+			<span class="box" data-box="8"></span>
+			<span class="box" data-box="9"></span>
+			<span class="box" data-box="10"></span>
+			<span class="row">10</span>
+			<span class="box" data-box="11"></span>
+			<span class="box" data-box="12"></span>
+			<span class="box" data-box="13"></span>
+			<span class="box" data-box="14"></span>
+			<span class="box" data-box="15"></span>
+			<span class="box" data-box="16"></span>
+			<span class="box" data-box="17"></span>
+			<span class="box" data-box="18"></span>
+			<span class="box" data-box="19"></span>
+			<span class="box" data-box="20"></span>
+			<span class="row">20</span>
+			<span class="box" data-box="21"></span>
+			<span class="box" data-box="22"></span>
+			<span class="box" data-box="23"></span>
+			<span class="box" data-box="24"></span>
+			<span class="box" data-box="25"></span>
+			<span class="box" data-box="26"></span>
+			<span class="box" data-box="27"></span>
+			<span class="box" data-box="28"></span>
+			<span class="box" data-box="29"></span>
+			<span class="box" data-box="30"></span>
+			<span class="row">30</span>
+			<span class="box" data-box="31"></span>
+			<span class="box" data-box="32"></span>
+			<span class="box" data-box="33"></span>
+			<span class="box" data-box="34"></span>
+			<span class="box" data-box="35"></span>
+			<span class="box" data-box="36"></span>
+			<span class="box" data-box="37"></span>
+			<span class="box" data-box="38"></span>
+			<span class="box" data-box="39"></span>
+			<span class="box" data-box="40"></span>
+			<span class="row">40</span>
+			<span class="box" data-box="41"></span>
+			<span class="box" data-box="42"></span>
+			<span class="box" data-box="43"></span>
+			<span class="box" data-box="44"></span>
+			<span class="box" data-box="45"></span>
+			<span class="box" data-box="46"></span>
+			<span class="box" data-box="47"></span>
+			<span class="box" data-box="48"></span>
+			<span class="box" data-box="49"></span>
+			<span class="box" data-box="50"></span>
+			<span class="row">50</span>
+			<span class="box" data-box="51"></span>
+			<span class="box" data-box="52"></span>
+			<span class="box" data-box="53"></span>
+			<span class="box" data-box="54"></span>
+			<span class="box" data-box="55"></span>
+			<span class="box" data-box="56"></span>
+			<span class="box" data-box="57"></span>
+			<span class="box" data-box="58"></span>
+			<span class="box" data-box="59"></span>
+			<span class="box" data-box="60"></span>
+			<span class="row">60</span>
+			<span class="box" data-box="61"></span>
+			<span class="box" data-box="62"></span>
+			<span class="box" data-box="63"></span>
+			<span class="box" data-box="64"></span>
+			<span class="box" data-box="65"></span>
+			<span class="box" data-box="66"></span>
+			<span class="box" data-box="67"></span>
+			<span class="box" data-box="68"></span>
+			<span class="box" data-box="69"></span>
+			<span class="box" data-box="70"></span>
+			<span class="row">70</span>
+			<span class="box" data-box="71"></span>
+			<span class="box" data-box="72"></span>
+			<span class="box" data-box="73"></span>
+			<span class="box" data-box="74"></span>
+			<span class="box" data-box="75"></span>
+			<span class="box" data-box="76"></span>
+			<span class="box" data-box="77"></span>
+			<span class="box" data-box="78"></span>
+			<span class="box" data-box="79"></span>
+			<span class="box" data-box="80"></span>
+			<span class="row">80</span>
+			<span class="box" data-box="81"></span>
+			<span class="box" data-box="82"></span>
+			<span class="box" data-box="83"></span>
+			<span class="box" data-box="84"></span>
+			<span class="box" data-box="85"></span>
+			<span class="box" data-box="86"></span>
+			<span class="box" data-box="87"></span>
+			<span class="box" data-box="88"></span>
+			<span class="box" data-box="89"></span>
+			<span class="box" data-box="90"></span>
+			<span class="row">90</span>
+			<span class="box" data-box="91"></span>
+			<span class="box" data-box="92"></span>
+			<span class="box" data-box="93"></span>
+			<span class="box" data-box="94"></span>
+			<span class="box" data-box="95"></span>
+			<span class="box" data-box="96"></span>
+			<span class="box" data-box="97"></span>
+			<span class="box" data-box="98"></span>
+			<span class="box" data-box="99"></span>
+			<span class="box" data-box="100"></span>
+		</section>
+		<h4 class="name-tag">You (Computer's Ships)</h4>
+		<span></span>
+		<h4 class="name-tag">Computer (Your Ships)</h4>
+	</section>
+	<div class="pass-screen">2</div>
+	<div class="ships-selection">
+		<h3>Player 1: Place your ships</h3>
+		<div class="selection">
+			<section id="blocks">
+				<p>Drag and drop your 10 ships from each section below onto your board</p>
+				<ol>
+					<label>🛳 Battleship (covering 4 blocks)</label>
+					<li>
+						<div draggable="true" data-size="4" data-orientation="horizontal" data-placed="false" class="block" id="b4-1">
+							<span data-block="b4-1">&circlearrowright;</span>
+						</div>
+					</li>
+				</ol>
+				<ol>
+					<label>🛥 Destroyers (covering 3 blocks)</label>
+					<li>
+						<div draggable="true" data-size="3" data-orientation="horizontal" data-placed="false" class="block" id="b3-1">
+							<span data-block="b3-1">&circlearrowright;</span>
+						</div>
+					</li>
+					<li>
+						<div draggable="true" data-size="3" data-orientation="horizontal" data-placed="false" class="block" id="b3-2">
+							<span data-block="b3-2">&circlearrowright;</span>
+						</div>
+					</li>
+				</ol>
+				<ol>
+					<label>&#128674; Submarines (covering 2 blocks)</label>
+					<li>
+						<div draggable="true" data-size="2" data-orientation="horizontal" data-placed="false" class="block" id="b2-1">
+							<span data-block="b2-1">&circlearrowright;</span>
+						</div>
+					</li>
+					<li>
+						<div draggable="true" data-size="2" data-orientation="horizontal" data-placed="false" class="block" id="b2-2">
+							<span data-block="b2-2">&circlearrowright;</span>
+						</div>
+					</li>
+					<li>
+						<div draggable="true" data-size="2" data-orientation="horizontal" data-placed="false" class="block" id="b2-3">
+							<span data-block="b2-3">&circlearrowright;</span>
+						</div>
+					</li>
+				</ol>
+				<ol>
+					<label>⛵ Canon Boats (covering a block)</label>
+					<li>
+						<div draggable="true" data-size="1" data-orientation="horizontal" data-placed="false" class="block" id="b1-1"></div>
+					</li>
+					<li>
+						<div draggable="true" data-size="1" data-orientation="horizontal" data-placed="false" class="block" id="b1-2"></div>
+					</li>
+					<li>
+						<div draggable="true" data-size="1" data-orientation="horizontal" data-placed="false" class="block" id="b1-3"></div>
+					</li>
+					<li>
+						<div draggable="true" data-size="1" data-orientation="horizontal" data-placed="false" class="block" id="b1-4"></div>
+					</li>
+				</ol>
+			</section>
+			<section class="board active">
+				<span></span>
+				<span class="column">A</span>
+				<span class="column">B</span>
+				<span class="column">C</span>
+				<span class="column">D</span>
+				<span class="column">E</span>
+				<span class="column">F</span>
+				<span class="column">G</span>
+				<span class="column">H</span>
+				<span class="column">I</span>
+				<span class="column">J</span>
+				<span class="row">0</span>
+				<span class="box" data-box="1"></span>
+				<span class="box" data-box="2"></span>
+				<span class="box" data-box="3"></span>
+				<span class="box" data-box="4"></span>
+				<span class="box" data-box="5"></span>
+				<span class="box" data-box="6"></span>
+				<span class="box" data-box="7"></span>
+				<span class="box" data-box="8"></span>
+				<span class="box" data-box="9"></span>
+				<span class="box" data-box="10"></span>
+				<span class="row">10</span>
+				<span class="box" data-box="11"></span>
+				<span class="box" data-box="12"></span>
+				<span class="box" data-box="13"></span>
+				<span class="box" data-box="14"></span>
+				<span class="box" data-box="15"></span>
+				<span class="box" data-box="16"></span>
+				<span class="box" data-box="17"></span>
+				<span class="box" data-box="18"></span>
+				<span class="box" data-box="19"></span>
+				<span class="box" data-box="20"></span>
+				<span class="row">20</span>
+				<span class="box" data-box="21"></span>
+				<span class="box" data-box="22"></span>
+				<span class="box" data-box="23"></span>
+				<span class="box" data-box="24"></span>
+				<span class="box" data-box="25"></span>
+				<span class="box" data-box="26"></span>
+				<span class="box" data-box="27"></span>
+				<span class="box" data-box="28"></span>
+				<span class="box" data-box="29"></span>
+				<span class="box" data-box="30"></span>
+				<span class="row">30</span>
+				<span class="box" data-box="31"></span>
+				<span class="box" data-box="32"></span>
+				<span class="box" data-box="33"></span>
+				<span class="box" data-box="34"></span>
+				<span class="box" data-box="35"></span>
+				<span class="box" data-box="36"></span>
+				<span class="box" data-box="37"></span>
+				<span class="box" data-box="38"></span>
+				<span class="box" data-box="39"></span>
+				<span class="box" data-box="40"></span>
+				<span class="row">40</span>
+				<span class="box" data-box="41"></span>
+				<span class="box" data-box="42"></span>
+				<span class="box" data-box="43"></span>
+				<span class="box" data-box="44"></span>
+				<span class="box" data-box="45"></span>
+				<span class="box" data-box="46"></span>
+				<span class="box" data-box="47"></span>
+				<span class="box" data-box="48"></span>
+				<span class="box" data-box="49"></span>
+				<span class="box" data-box="50"></span>
+				<span class="row">50</span>
+				<span class="box" data-box="51"></span>
+				<span class="box" data-box="52"></span>
+				<span class="box" data-box="53"></span>
+				<span class="box" data-box="54"></span>
+				<span class="box" data-box="55"></span>
+				<span class="box" data-box="56"></span>
+				<span class="box" data-box="57"></span>
+				<span class="box" data-box="58"></span>
+				<span class="box" data-box="59"></span>
+				<span class="box" data-box="60"></span>
+				<span class="row">60</span>
+				<span class="box" data-box="61"></span>
+				<span class="box" data-box="62"></span>
+				<span class="box" data-box="63"></span>
+				<span class="box" data-box="64"></span>
+				<span class="box" data-box="65"></span>
+				<span class="box" data-box="66"></span>
+				<span class="box" data-box="67"></span>
+				<span class="box" data-box="68"></span>
+				<span class="box" data-box="69"></span>
+				<span class="box" data-box="70"></span>
+				<span class="row">70</span>
+				<span class="box" data-box="71"></span>
+				<span class="box" data-box="72"></span>
+				<span class="box" data-box="73"></span>
+				<span class="box" data-box="74"></span>
+				<span class="box" data-box="75"></span>
+				<span class="box" data-box="76"></span>
+				<span class="box" data-box="77"></span>
+				<span class="box" data-box="78"></span>
+				<span class="box" data-box="79"></span>
+				<span class="box" data-box="80"></span>
+				<span class="row">80</span>
+				<span class="box" data-box="81"></span>
+				<span class="box" data-box="82"></span>
+				<span class="box" data-box="83"></span>
+				<span class="box" data-box="84"></span>
+				<span class="box" data-box="85"></span>
+				<span class="box" data-box="86"></span>
+				<span class="box" data-box="87"></span>
+				<span class="box" data-box="88"></span>
+				<span class="box" data-box="89"></span>
+				<span class="box" data-box="90"></span>
+				<span class="row">90</span>
+				<span class="box" data-box="91"></span>
+				<span class="box" data-box="92"></span>
+				<span class="box" data-box="93"></span>
+				<span class="box" data-box="94"></span>
+				<span class="box" data-box="95"></span>
+				<span class="box" data-box="96"></span>
+				<span class="box" data-box="97"></span>
+				<span class="box" data-box="98"></span>
+				<span class="box" data-box="99"></span>
+				<span class="box" data-box="100"></span>
+			</section>
+			<section class="buttons">
+				<button id="clear">Clear &#x239a;</button>
+				<button id="randomize">Randomize <!-- &#x1f500; -->🔃</button>
+				<button id="continue" disabled>Continue &#x25b6;</button>
+			</section>
+		</div>
+	</div>
+</body>
+</html>

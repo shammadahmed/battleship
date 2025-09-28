@@ -1,0 +1,474 @@
+body {
+	margin-top: 10px;
+}
+
+h1 {
+    display: inline;
+    padding: 5px;
+    border-radius: 50px;
+    color: ghostwhite;
+    text-shadow: 2px 2px black;
+    box-shadow: 1px 3px 6px #607D8B;
+    border: 1px solid black;
+    font-size: 25px;
+    cursor: pointer;
+    margin-top: 60px;
+}
+
+.light-logo {
+    background-color: #FF5722;
+}
+
+.light-logo:hover {
+	background-color: #fb6a3d;
+	box-shadow: 1px 2px 6px #607D8B;
+}
+
+.dark-logo {
+    background-color: #000;
+}
+
+.dark-logo:hover {
+	background-color: #2d2c2c;
+	box-shadow: 1px 2px 6px #607D8B;
+}
+
+.green-text:after {
+	color: green;
+}
+
+h2 {
+	color: green;
+	font-style: oblique;
+/*	text-transform: uppercase;*/
+/*	background-color: #56bc6c;*/
+	text-align: center;
+/*	text-shadow: 1px 1px grey;/**/
+/*	box-shadow: 2px 2px grey;*/
+	margin: 20px 0;
+	height: 28px;
+}
+
+h4 {
+	font-style: oblique;
+	font-weight: normal;
+}
+
+#game {
+	margin: 1px auto;
+	max-width: 1160px;
+	font-family: sans-serif;
+	box-sizing: border-box;
+	display: grid;
+	grid-template-columns: 4.5fr 1fr 4.5fr;
+}
+
+.row, .column {
+	text-align: center;
+	height: 40px;
+	line-height: 40px;
+	font-size: 12px;
+}
+
+.box {
+	border: 1px solid grey;
+	width: 40px;
+	height: 40px;
+	text-align: center;
+	line-height: 40px;
+	font-size: 30px;
+	background-color: lightblue;
+	color: white;
+	transition: all 0.2s linear;
+}
+
+@media screen and (max-width: )
+
+.board:not(.active) .box[data-ship="true"]:not(.hit):after, .ships-selection .board .box[data-ship="true"]:after {
+	content: "\2715";
+	color: red;
+	text-shadow: 2px 2px lightgrey;
+}
+
+.board .box.frozen {	
+	color: #e5e5e5;
+	background-color: #cedee378;
+	border-color: silver;
+}
+
+
+#game .board .box.frozen {	
+	background-color: #f8fafb;
+	box-shadow: 2px 2px lightblue;
+}
+
+.board .box.frozen:after {
+	content: "\26AC";
+	font-size: 24px;
+}
+
+section#game .active:not(.gloss) .box:not(.hit):not(.missed):not(.frozen):hover {
+	cursor: crosshair;
+/*	box-shadow: 1px 1px lightgrey;*/
+/*	background-color: #9cd2e3;*/
+	transform: scale(1.05);
+}
+
+section#game .active:not(.gloss) .box:not(.hit):not(.missed):not(.frozen):hover:after {
+	content: "\002722";
+	text-shadow: 1px 1px grey;
+}
+
+.board {
+	display: inline-grid;
+	grid-template-columns: repeat(11, 40px);
+	grid-template-rows: repeat(11, 40px);
+	grid-gap: 6px;
+	height: 500px;
+	padding: 3px;
+	padding-bottom: 30px;
+	border-bottom: 2px solid rgba(255, 255, 255, 0);
+}
+
+.board:not(.active), .board:not(.active) .name-tag {
+	opacity: 0.3;
+}
+
+.board1 {
+/*	margin-right: 90px;*/
+}
+
+.gloss {
+	background: linear-gradient(to bottom, #f8ffe8 0%, #56bc6c 17%, #199b00 100%);
+	box-shadow: 0 0 10px rgba(255, 255, 255, 0.5) inset;
+	border-bottom: 2px solid #1d6511;
+/*	border-right: 1px solid lightgrey;*/
+	position: relative;
+	color: white;
+}
+
+.gloss:before {
+	content: "";
+	position: absolute;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	background: linear-gradient(to bottom, rgba(255, 255, 255, 0.7), rgba(255, 255, 255, 0.1));
+	pointer-events: none;
+}
+
+.name-tag {
+	width: 50%;
+	text-align: center;
+	margin-left: 120px;
+	font-family: serif;
+}
+
+.missed {
+	background-color: white;
+	color: dimgrey;
+/*	border: 2px solid goldenrod;*/
+	font-weight: bold;
+	box-shadow: 2px 2px #ffe717, 1px 1px black;
+/*	transform: scale(1.05);*/
+}
+
+.board .missed:after, .board .missed:hover:after {
+	content: '\25cf';
+/*	content: '\00204D';*/
+	text-shadow: 1px 1px lightgrey;
+}
+
+.hit {
+	background-color: white;
+	color: red;
+/*	border: 2px solid red;*/
+	box-shadow: 2px 2px #4fff4f, 1px 1px black;
+/*	transform: scale(1.05);*/
+}
+
+.board .hit:after, .board .hit:hover:after {
+	content: '\1f4a5';
+/*	text-shadow: 1px 1px #FF5722;*/
+	text-shadow: 1px 2px 4px darkorange;
+}
+
+article {
+	padding-left: 30px;
+	width: 129px;
+}
+
+aside:first-child {
+	margin-top: 50px;
+	margin-bottom: 30px;
+}
+
+aside span {
+	width: 16px;
+	height: 16px;
+	line-height: 13px;
+	margin: 1px;
+	background-color: lightgreen;
+	display: inline-block;
+	border-radius: 50%;
+/*	border: 1px solid lightgrey;*/
+}
+
+aside span:after {
+	margin-left: 3px;
+	content: '\2693';
+	font-weight: bold;
+	font-size: 12px;
+	color: grey;
+	text-align: center;
+	word-spacing: ;
+}
+
+aside span.broken {
+    background-color: #ff490f;
+    border-color: grey;
+}
+
+aside span.broken:hover {
+    background-color: #FF5722;
+    border-color: grey;
+}
+
+aside span.broken:after {
+	content: '\1256';
+	color: white;
+}
+
+aside span:hover {
+	background-color: #c4dde5;
+	box-shadow: none;
+}
+
+.ship {
+	background-color: lightgrey;
+	border: 1px solid grey;
+	border-radius: 10px;
+	width: fit-content;
+	display: inline-flex;
+	margin: 1px;
+	box-shadow: 1px 1px lightgrey;
+}
+
+aside > span {
+	border: 1px solid grey;
+	box-shadow: 1px 1px lightgrey;
+}
+
+aside label {
+	margin-top: 10px;
+	display: block;
+	font-size: 12px;
+	display: list-item;
+	list-style-type: lower-roman;
+}
+
+aside h5 {
+	margin-bottom: 0;
+	font-weight: normal;
+	text-decoration: underline;
+}
+
+div.pass-screen {
+	display: none;
+	transition: background 1s ease;
+}
+
+.pass-screen.active {
+	z-index: 100;
+	background: radial-gradient(circle at center, lightgreen, lightgreen, #67ef67, #49ef49);
+	text-align: center;
+}
+
+.pass-screen.active {
+	display: flex;
+	position: absolute;
+	top: 0;
+	bottom: 0;
+	left: 0;
+	right: 0;
+    color: ghostwhite;
+    text-shadow: 1px 1px black;
+    font-size: 30px;
+	justify-content: center;
+	align-items: center;
+/*	font-style: italic;*/
+	font-family: serif;
+}
+
+.pass-screen.active p {
+	margin: 50px;
+}
+
+.orange {
+	color: #FF5722;
+	text-shadow: 1px 1px red;
+}
+
+.ball {
+	font-size: 45px;
+	font-style: italic;
+	font-family: sans-serif; 
+/*    text-shadow: 2px 2px black;*/
+}
+
+.ships-selection {
+	font-family: sans-serif;
+}
+
+
+.selection #blocks {
+	width: 100%;
+}
+
+@media screen and (min-width: 1100px) {
+	.selection {
+		display: grid;
+		grid-template-columns: 3fr 4fr 2fr;
+		width: 1100px;
+		margin: 0 auto;
+	}
+
+	.selection #blocks {
+		width: 450px;
+	}
+
+
+	.selection .buttons {
+		margin-top: 150px;
+	}
+}
+
+@media screen and (min-width: 963px) and (max-width: 1099px) {
+	.selection #blocks, .selection .board {
+		width: 46%;
+		float: left;
+		margin-right: 5px;
+		box-sizing: border-box;
+	}
+}
+
+
+.selection button {
+	height: 50px;
+	width: 100%;
+	margin-top: 10px;
+	border-radius: 10px;
+/*	background-color: white;*/
+	border: 2px solid grey;
+}
+
+.selection button:hover:not(:disabled) {
+	background-color: #f5f3f3;
+}
+
+.selection button:disabled {
+	border-color: initial;
+}
+
+.block {
+	display: inline-block;
+	border: 5px solid red;
+	height: 40px;
+	cursor: pointer;
+	transition: all 0.2s linear;
+}
+
+#blocks > .block {
+/*	margin: 10px;*/
+	z-index: 10;
+	position: relative;
+}
+
+.ships-selection [data-size="1"] {
+	width: 40px;
+}
+
+.ships-selection [data-size="2"] {
+	width: 86px;
+}
+
+.ships-selection [data-size="3"] {
+	width: 132px;
+}
+
+.ships-selection [data-size="4"] {
+	width: 178px;
+}
+
+.ships-selection .board .box {
+	border: none;
+	position: relative;
+	z-index: 0;
+}
+
+#blocks label {
+	display: block;
+}
+
+ol > label {
+	color: #4f4e4e;
+	position: absolute;
+	top: -12px;
+	background-color: white;
+	display: inline-block;
+	font-family: sans-serif;
+	padding-left: 2px;
+	padding-right: 2px;
+}
+
+#blocks ol {
+	list-style-type: lower-roman;
+	display: inline-flex;
+	margin: 0 0 20px;
+	padding: 20px;
+	border: 1px solid lightgrey;
+	border-radius: 5px;
+	position: relative;
+	z-index: 0;
+	min-height: 68px;
+	min-width: 280px;
+}
+
+#blocks ol:nth-of-type(2) {
+	width: 344px;
+}
+
+#blocks ol:nth-of-type(3) {
+	width: 378px;
+}
+
+#blocks ol:nth-of-type(4) {
+	width: 320px;
+}
+
+#blocks li {
+	margin: 0 30px 0 0;
+	list-style-position: inside;
+	color: #4f4e4e;
+}
+
+div[data-placed] {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
+span[data-block] {
+	color: grey;
+	background-color: white;
+	border-radius: 50%;
+	padding: 1px;
+	box-shadow: 1px 1px 5px lightgrey;
+	cursor: pointer;
+
+}
+span[data-block]:hover {
+	background-color: lightgrey;
+	color: white;
+}
