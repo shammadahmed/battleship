@@ -2,6 +2,7 @@ const gameLoop = require('./gameloop.js');
 const Ship = require('./Ship.js');
 const Battleship = require('./Battleship.js');
 const blocksSpritemap = require('./blocks-spritemap.png');
+const blocksSpritemapFlipped = require('./blocks-spritemap-flipped.png');
 
 const gamePrelim = (game) => {
   let selectedShips = [];
@@ -14,11 +15,10 @@ const gamePrelim = (game) => {
   let draggableCoors = []
   let feedbackImg = new Image();
   feedbackImg.src = blocksSpritemap;
-  feedbackImg.style.height = '50px'
-  feedbackImg.style.width = '175px';
   feedbackImg.style.objectFit = 'none';
   feedbackImg.style.objectPosition = '0px 0px';
-  feedbackImg.style.overflow = 'hidden';
+  feedbackImg.style.width = '192px';
+  feedbackImg.style.height = '53px';
   feedbackImg.style.clipPath = 'inset(50px 50px)';
   document.body.appendChild(feedbackImg)
 
@@ -73,18 +73,53 @@ const gamePrelim = (game) => {
       block.style.height = '40px';
 
       block.dataset.orientation = 'horizontal';
+
+      feedbackImg.src = blocksSpritemapFlipped;
+
+      if (Number(e.target.dataset.size) === 4) {
+        feedbackImg.style.objectPosition = '0px 0px';
+        feedbackImg.style.height = '192px';
+      } else if (Number(e.target.dataset.size) === 3) {
+        feedbackImg.style.objectPosition = '0px -192px';
+        feedbackImg.style.height = '145.5px';
+      } else if (Number(e.target.dataset.size) === 2) {
+        feedbackImg.style.objectPosition = '0px -337.5px';
+        feedbackImg.style.height = '98.5px';
+      } else if (Number(e.target.dataset.size) === 1) {
+        feedbackImg.style.objectPosition = '0px -436px';
+        feedbackImg.style.height = '53px';
+      }
+
     } else if (orientation === 'horizontal') {
       block.style.height = style.width;
 
       block.style.width = '40px';
 
       block.dataset.orientation = 'vertical';
+
+      feedbackImg.src = blocksSpritemapFlipped;
+
+      if (Number(e.target.dataset.size) === 4) {
+        feedbackImg.style.objectPosition = '0px 0px';
+        feedbackImg.style.height = '192px';
+      } else if (Number(e.target.dataset.size) === 3) {
+        feedbackImg.style.objectPosition = '0px -192px';
+        feedbackImg.style.height = '145.5px';
+      } else if (Number(e.target.dataset.size) === 2) {
+        feedbackImg.style.objectPosition = '0px -337.5px';
+        feedbackImg.style.height = '98.5px';
+      } else if (Number(e.target.dataset.size) === 1) {
+        feedbackImg.style.objectPosition = '0px -436px';
+        feedbackImg.style.height = '53px';
+      }
     }
   }));
 
   document.querySelectorAll('.block').forEach(block => block.addEventListener('dragstart', e => {
     e.dataTransfer.setData('text/plain', e.target.id);
     draggableSize = e.target.dataset.size;
+
+    feedbackImg.src = blocksSpritemap;
 
     if (Number(e.target.dataset.size) === 4) {
       feedbackImg.style.objectPosition = '0px 0px';
@@ -101,7 +136,21 @@ const gamePrelim = (game) => {
     }
     
     if (e.target.dataset.orientation === 'vertical') {
-      feedbackImg.style.transform = 'rotate(90deg)';
+      feedbackImg.src = blocksSpritemapFlipped;
+
+      if (Number(e.target.dataset.size) === 4) {
+        feedbackImg.style.objectPosition = '0px 0px';
+        feedbackImg.style.height = '192px';
+      } else if (Number(e.target.dataset.size) === 3) {
+        feedbackImg.style.objectPosition = '0px -192px';
+        feedbackImg.style.height = '145.5px';
+      } else if (Number(e.target.dataset.size) === 2) {
+        feedbackImg.style.objectPosition = '0px -337.5px';
+        feedbackImg.style.height = '98.5px';
+      } else if (Number(e.target.dataset.size) === 1) {
+        feedbackImg.style.objectPosition = '0px -436px';
+        feedbackImg.style.height = '53px';
+      }
     }
 
     e.dataTransfer.setDragImage(feedbackImg, 22, 22);
