@@ -2,6 +2,8 @@ name: Build and Deploy
 on:
   push:
     branches: [main]
+permissions:
+  contents: write # Allows the action to push to the gh-pages branch
 jobs:
   build-and-deploy:
     runs-on: ubuntu-latest
